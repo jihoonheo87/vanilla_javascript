@@ -41,8 +41,6 @@ function match() {
   }
 }
 
-document.write('your hand is: ' + yourHand);
-document.write("<br>");
-document.write('computer hand is: '+  computer);
-document.write("<br>");
-document.write('result: ' + match());
+console.log(yourHand);
+console.log(computer);
+console.log(match());
