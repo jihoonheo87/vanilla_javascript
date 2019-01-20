@@ -1,46 +1,20 @@
-let yourHand = prompt('choose rock paper scissor');
+function start() {  
+  var numOfMom = prompt('number of mother');
+  var boy = 0;
+  var girl = 0;
 
-let computer = game(Math.random() * 100 * 3);
-
-function game(number){
-  if (number < 100){
-    return 'rock'
-  }else if(number >= 100 && number <= 200){
-    return 'scissor'
-  }else{
-    return 'paper'
+  for (let i = 0; i < numOfMom; i++) {
+    while (Math.floor(Math.random() * 2 < 1)) {
+      girl = girl + 1;
+      console.log("it is a girl")
+    } 
+      boy = boy + 1;
+      console.log("it is a boy")
   };
-}
 
-function match() {
-  if(yourHand === computer){
-    return 'tie';
-  };
-  
-  if(yourHand === 'rock'){
-    if (computer === 'paper'){
-      return 'computer won'
-    } else {
-      return 'you won'
-    }
-  }
-  if(yourHand === 'scissor'){
-    if (computer === 'paper'){
-      return 'you won'
-    } else {
-      return 'computer won'
-    }
-  }
-  
-  if(yourHand === 'paper'){
-    if (computer === 'scissor'){
-      return 'computer won'
-    } else {
-      return 'you won'
-    }
-  }
+  document.write(`number of boy ${boy}`);
+  document.write('<br>');  
+  document.write(`number of girl ${girl}`);
+  document.write(`<br>`);
+  document.write('ratio' + girl/boy)
 }
-
-console.log(yourHand);
-console.log(computer);
-console.log(match());
